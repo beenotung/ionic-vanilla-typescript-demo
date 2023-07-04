@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- ionic over CDN -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <style>
+      [hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ion-app>
+      <ion-router>
+        <ion-route-redirect from="/" to="/more"></ion-route-redirect>
+        <ion-route url="/more" component="more-page"></ion-route>
+        <ion-route url="/profile" component="profile-page"></ion-route>
+        <ion-route url="/chatroom" component="chatroom-page"></ion-route>
+      </ion-router>
+      <ion-router-outlet></ion-router-outlet>
+    </ion-app>
+    <script src="bundle.js"></script>
+  </body>
+</html>
